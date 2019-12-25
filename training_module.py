@@ -16,7 +16,7 @@ def readFiles(path):
 	os.chdir(path)
 	file_content = []
 	file_name_list = os.listdir(path)
-	print "no of files - ",len(file_name_list)
+	print ("no of files - ",len(file_name_list))
 	for filename in file_name_list:
 		f = open(filename, 'r')
 		linetext=f.readlines()
@@ -54,8 +54,8 @@ def train():
 	#Probability of a word in a given topic is - 
 	#frequency of word over total number of words appeared in that topic
 	
-	print "learning started ..."
-	print "number of topics -- ",len(topics)
+	print ("learning started ...")
+	print ("number of topics -- ",len(topics))
 	s = time.time()
 	for each_topic in topics:
 		print "learning %s topic"%(each_topic.upper())
@@ -67,5 +67,5 @@ def train():
 		likelihood[each_topic] = word_prob
 		print "learning %s got completed in"%(each_topic.upper()),(time.time()-s1),"secs"
 		print "*********"*10
-	print "learning all topics completed in ",(time.time()-s),"secs"
+	print ("learning all topics completed in ",(time.time()-s),"secs")
 	return likelihood
