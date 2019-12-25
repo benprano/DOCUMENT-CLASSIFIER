@@ -49,4 +49,4 @@ def test(root_path, likelihood):
 						 for everyWord in words)) for key,value in likelihood.iteritems())
 
 			deducted_topic = max(posterior, key=posterior.get)
-			print no_of_files,"For file ",eachFile," Deducted topic:",deducted_topic.upper()," Actual topic: ",each_topic.upper()
+			print (no_of_files,"For file ",eachFile," Deducted topic:",deducted_topic.upper()," Actual topic: ",each_topic.upper())
